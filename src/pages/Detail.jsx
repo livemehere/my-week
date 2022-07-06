@@ -1,3 +1,5 @@
+import { useCallback } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DetailWrap, HightLight } from "../components/Detail/style";
@@ -7,6 +9,18 @@ const Detail = () => {
   const { id } = useParams();
   const [value, setValue] = useState(0);
   const navigate = useNavigate();
+
+  const handleKeyboardInput = useCallback((e) => {
+    if (/[1-5]/.test(e.key)) {
+      setValue(e.key);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyboardInput);
+    return () => window.removeEventListener("keydown", handleKeyboardInput);
+  }, []);
+
   return (
     <DetailWrap>
       <h1>
