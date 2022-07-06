@@ -1,4 +1,4 @@
-name: Example workflow for S3 Deploy
+name: S3 deploy with cloud front
 on:
   push:
     branches:
