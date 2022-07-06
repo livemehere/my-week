@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import Week from "../Week";
+import { WeekBoxWrap, RateBoxWrap, AvgTitle } from "./style";
 
 const WeekBox = () => {
   const [datas, setDatas] = useState([]);
@@ -29,17 +30,18 @@ const WeekBox = () => {
   }, [datas]);
 
   return (
-    <div>
+    <WeekBoxWrap>
+      <h1>나의 일주일은?</h1>
       <div>
         {datas.map((data) => (
           <Week key={data.id} data={data} maxRate={5} />
         ))}
       </div>
-      <div>
-        <h1>{avg}</h1>
+      <RateBoxWrap>
+        <AvgTitle>{avg}</AvgTitle>
         <button onClick={() => resetRate()}>RESET</button>
-      </div>
-    </div>
+      </RateBoxWrap>
+    </WeekBoxWrap>
   );
 };
 
