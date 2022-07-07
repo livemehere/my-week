@@ -1,11 +1,14 @@
 # 나의 일주일 평점 남기기
-<div align="center">
-<img width="448" alt="image" src="https://user-images.githubusercontent.com/61547778/177597112-c8e5cfe4-0e4e-4af3-bfe2-3f3fb414cee9.png" >
-</div>
 
 <div align="center">
 <img width="448" alt="image" src="https://user-images.githubusercontent.com/61547778/177597671-0b09d790-e899-43a6-bfa1-73c77afe5f1b.gif" />
 </div>
+
+## 기능
+
+- 접속시 오늘 요일을 기준으로 정렬
+- 요일별로 1 ~ 5 사이의 랜덤한 평점 생성
+- 평점하는 페이지로 이동 (클릭 or 숫자 키보드로 입력)
 
 ## stack
 
@@ -14,6 +17,9 @@
 - useMemo
 - useCallback
 - Lazy loading
+- AWS S3
+- AWS Cloud Front
+- Github Actions
 
 ## 과제 질문
 
